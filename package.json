@@ -9,7 +9,9 @@
   },
   "scripts": {
     "start": "node index.js",
-    "backend": "nodemon index.js"
+    "backend": "nodemon index.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "author": "CNPM\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[CTeam_CNPM\u001b[D\u001b[D\u001b[D\u001b[\u001b[\u001b[C\u001b[C\u001b[CmCNPM",
   "license": "ISC",
@@ -19,6 +21,8 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "concurrently": "^5.0.0",
+    "http-proxy-middleware": "^0.20.0",
     "nodemon": "^1.19.4"
   }
 }
